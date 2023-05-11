@@ -54,7 +54,6 @@ describe(["@tier3"], "Business services pagination validations", function () {
         cy.get("td[data-label=Name]").then(($rows) => {
             cy.wrap($rows.length).should("eq", 10);
         });
-
         // Select 20 items per page
         selectItemsPerPage(20);
         cy.wait(2 * SEC);
